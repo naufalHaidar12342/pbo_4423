@@ -14,14 +14,14 @@ public class biodata {
         // " \n " digunakan untuk memberi jarak saja 
         System.out.print(">>>Biodata<<< \n");
         System.out.print("\n");
-        System.out.println("NIM         :A11.2019.");
-        System.out.println("Nama        :Muhammad Amirul Mukminin");
-        System.out.println("Alamat      :");
+        System.out.println("NIM         :A11.2019.12342");
+        System.out.println("Nama        :Naufal Haidar Rauf");
+        System.out.println("Alamat      :Zebra Mukti Utara II, Pedurungan Kidul");
         System.out.println("Kota        :Semarang");
-        System.out.println("Kode Pos    :A11.2019.");
-        System.out.println("Telp        :A11.2019.");
-        System.out.println("Hp          :A11.2019.");
-        System.out.println("Email       :A11.2019.");
+        System.out.println("Kode Pos    :50192");
+        System.out.println("Telp        :-");
+        System.out.println("Hp          :085156967023");
+        System.out.println("Email       :111201912342@mhs.dinus.ac.id");
         
         // pemisah saja, biar tidak bingung//
 
