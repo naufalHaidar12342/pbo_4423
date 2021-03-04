@@ -1,6 +1,6 @@
-//membuat biodata
-//serta menampilkan rumus luas dan keliling
-//naufalHaidar12342
+//Pertemuan 1
+//Nama : M. Amirul Mukminin
+//NIM  : A11.2019.12342
 
 class biodataku {
     public static void main(String[] args) {
@@ -14,14 +14,14 @@ class biodataku {
         // " \n " digunakan untuk memberi jarak saja 
         System.out.print(">>>Biodata<<< \n");
         System.out.print("\n");
-        System.out.println("NIM         :A11.2019.");
+        System.out.println("NIM         :A11.2019.12321");
         System.out.println("Nama        :Muhammad Amirul Mukminin");
-        System.out.println("Alamat      :");
+        System.out.println("Alamat      :Jl.Panda Timur 1 No.23 RT 07/ RW 10");
         System.out.println("Kota        :Semarang");
-        System.out.println("Kode Pos    :A11.2019.");
-        System.out.println("Telp        :A11.2019.");
-        System.out.println("Hp          :A11.2019.");
-        System.out.println("Email       :A11.2019.");
+        System.out.println("Kode Pos    :50192");
+        System.out.println("Telp        :085335918462");
+        System.out.println("Hp          :085335918462");
+        System.out.println("Email       :mumininamirul259@gmail.com");
         
         // pemisah saja, biar tidak bingung//
 
