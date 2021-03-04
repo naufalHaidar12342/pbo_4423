@@ -1,0 +1,6 @@
+1) jika file .java diubah namanya, program tidak akan error
+	karena yg dipanggil adalah yang bertipe .class
+2) meng-compile file java bisa dengan powershell atau cmd , perintahnya sama
+	"javac [nama program].java "
+
+    *tanpa tanda petik
