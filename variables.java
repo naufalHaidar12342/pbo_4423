@@ -13,7 +13,9 @@ class variables {
 
         // langkah lain inisiasi
         int _angka;
+        _angka=33;
         int $angka;
+        $angka=43;
 
         char karakter;
         karakter='%';
