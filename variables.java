@@ -16,6 +16,7 @@ class variables {
         _angka=33;
         int $angka;
         $angka=43;
+        System.out.println(_angka+$angka);
 
         char karakter;
         karakter='%';
