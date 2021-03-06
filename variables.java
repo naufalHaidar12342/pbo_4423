@@ -40,7 +40,7 @@ class variables {
         // gunakan %.2f
         // jika ingin lebih dari 2, angka '2'
         //di dalam %.2f diganti 3,4,5 , dst...
-        System.out.printf("angka= %.2f", tampungan);
+        System.out.printf("angka= %.2f \n", tampungan);
 
         //integer dibagi dengan integer
         //akan menghasilkan integer
