@@ -27,7 +27,7 @@ class variables {
 
         // %f menampilkan angka di belakang koma
         //yang lebih panjang
-        System.out.printf("angka= %f",tampungan);
+        System.out.printf("angka= %f \n",tampungan);
 
         //angka=tampungan;
         //integer di tukar dengan double/float, tidak bisa
