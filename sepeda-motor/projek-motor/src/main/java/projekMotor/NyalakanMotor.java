@@ -42,5 +42,6 @@ public class NyalakanMotor {
 
         spm_1.akselerasiMatic();
         spm_1.pabrikanLama();
+        System.out.println("");
     }
 }
