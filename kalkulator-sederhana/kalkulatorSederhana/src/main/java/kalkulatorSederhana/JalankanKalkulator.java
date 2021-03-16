@@ -17,8 +17,9 @@ public class JalankanKalkulator {
         Scanner tampungPilihan = new Scanner(System.in);
 
         int angka1, angka2, operasi;
-        System.out.println("masukkan 2 angka yang dioperasikan =");
+        System.out.println("masukkan angka pertama =");
         angka1 = tampungPilihan.nextInt();
+        System.out.println("masukkan angka kedua =");
         angka2 = tampungPilihan.nextInt();
 
         System.out.println("pilih operasi =");
@@ -31,34 +32,31 @@ public class JalankanKalkulator {
         System.out.println("pilih operasi (1/2/3/4/5) :");
         operasi = tampungPilihan.nextInt();
         MesinKalkulator wadah = new MesinKalkulator();
-        try {
-            if (operasi == 1) {
-                int tampilkan;
-                tampilkan = wadah.jalankanPenjumlahan(angka1, angka2);
-                System.out.println("jawabannya adalah " + tampilkan);
-            } else if (operasi == 2) {
-                int tampilkan;
-                // hasil = 0;
-                tampilkan = wadah.jalankanPengurangan(angka1, angka2);
-                System.out.println("jawabannya adalah " + tampilkan);
-            } else if (operasi == 3) {
-                int tampilkan;
-                // hasil = 0;
-                tampilkan = wadah.jalankanPerkalian(angka1, angka2);
-                System.out.println("jawabannya adalah " + tampilkan);
-            } else if (operasi == 4) {
-                int tampilkan;
-                // hasil = 0;
-                tampilkan = wadah.jalankanPembagian(angka1, angka2);
-                System.out.println("jawabannya adalah " + tampilkan);
 
-            } else if (operasi == 5) {
-                int tampilkan;
-                // hasil = 0;
-                tampilkan = wadah.jalankanSisaBagi(angka1, angka2);
-                System.out.println("jawabannya adalah " + tampilkan);
-            } else {
-                System.out.println("masukkan operasi yang sesuai");
+        try {
+            switch (operasi) {
+            case 1:
+                int hasilPenjumlahan;
+                hasilPenjumlahan = wadah.jalankanPenjumlahan(angka1, angka2);
+                System.out.println("jawaban dengan switch =" + hasilPenjumlahan);
+            case 2:
+                int hasilPengurangan;
+                hasilPengurangan = wadah.jalankanPengurangan(angka1, angka2);
+                System.out.println("jawaban dengan switch =" + hasilPengurangan);
+            case 3:
+                int hasilPerkalian;
+                hasilPerkalian = wadah.jalankanPerkalian(angka1, angka2);
+                System.out.println("jawaban dengan switch =" + hasilPerkalian);
+            case 4:
+                int hasilPembagian;
+                hasilPembagian = wadah.jalankanPembagian(angka1, angka2);
+                System.out.println("jawaban dengan switch =" + hasilPembagian);
+            case 5:
+                int hasilModulo;
+                hasilModulo = wadah.jalankanSisaBagi(angka1, angka2);
+                System.out.println("jawaban dengan switch =" + hasilModulo);
+            default:
+                break;
             }
         } finally {
             tampungPilihan.close();
