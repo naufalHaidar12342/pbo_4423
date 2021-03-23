@@ -17,11 +17,11 @@ public class JalankanKalkulator {
         Scanner tampungPilihan = new Scanner(System.in);
 
         int angka1, angka2, operasi;
+
         System.out.println("masukkan angka pertama =");
         angka1 = tampungPilihan.nextInt();
         System.out.println("masukkan angka kedua =");
         angka2 = tampungPilihan.nextInt();
-
         System.out.println("pilih operasi =");
         System.out.println("1. penjumlahan");
         System.out.println("2. pengurangan");
@@ -38,26 +38,32 @@ public class JalankanKalkulator {
             case 1:
                 int hasilPenjumlahan;
                 hasilPenjumlahan = wadah.jalankanPenjumlahan(angka1, angka2);
-                System.out.println("jawaban dengan switch =" + hasilPenjumlahan);
+                System.out.println("Penjumlahan dengan switch =" + hasilPenjumlahan);
+                break;
             case 2:
                 int hasilPengurangan;
                 hasilPengurangan = wadah.jalankanPengurangan(angka1, angka2);
-                System.out.println("jawaban dengan switch =" + hasilPengurangan);
+                System.out.println("Pengurangan dengan switch =" + hasilPengurangan);
+                break;
             case 3:
                 int hasilPerkalian;
                 hasilPerkalian = wadah.jalankanPerkalian(angka1, angka2);
-                System.out.println("jawaban dengan switch =" + hasilPerkalian);
+                System.out.println("Perkalian dengan switch =" + hasilPerkalian);
+                break;
             case 4:
                 int hasilPembagian;
                 hasilPembagian = wadah.jalankanPembagian(angka1, angka2);
-                System.out.println("jawaban dengan switch =" + hasilPembagian);
+                System.out.println("Pembagian dengan switch =" + hasilPembagian);
+                break;
             case 5:
                 int hasilModulo;
                 hasilModulo = wadah.jalankanSisaBagi(angka1, angka2);
-                System.out.println("jawaban dengan switch =" + hasilModulo);
+                System.out.println("Modulo dengan switch =" + hasilModulo);
+                break;
             default:
                 break;
             }
+
         } finally {
             tampungPilihan.close();
         }
