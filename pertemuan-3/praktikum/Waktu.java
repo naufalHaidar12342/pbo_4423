@@ -9,20 +9,6 @@ public class Waktu {
 
     }
 
-    public static void main(String[] args) {
-        // membuat objek dari class "Waktu"
-        Waktu mulai = new Waktu(8, 12, 15);
-        Waktu selesai = new Waktu(12, 34, 35);
-        Waktu selisih;
-
-        // memanggil method "perbedaan"
-        selisih = perbedaan(mulai, selesai);
-        System.out.printf("Waktu awal= %d:%d:%d \n", mulai.jam, mulai.menit, mulai.detik);
-        System.out.printf("Waktu selesai= %d:%d:%d \n", selesai.jam, selesai.menit, selesai.detik);
-        System.out.printf("selisih waktu= %d:%d:%d \n", selisih.jam, selisih.menit, selisih.detik);
-
-    }
-
     public static Waktu perbedaan(Waktu mulai, Waktu selesai) {
         Waktu selisih = new Waktu(0, 0, 0);
 
@@ -49,4 +35,19 @@ public class Waktu {
         return (selisih);
 
     }
+
+    public static void main(String[] args) {
+        // membuat objek dari class "Waktu"
+        Waktu mulai = new Waktu(8, 12, 15);
+        Waktu selesai = new Waktu(12, 34, 35);
+        Waktu selisih;
+
+        // memanggil method "perbedaan"
+        selisih = perbedaan(mulai, selesai);
+        System.out.printf("Waktu awal= %d:%d:%d \n", mulai.jam, mulai.menit, mulai.detik);
+        System.out.printf("Waktu selesai= %d:%d:%d \n", selesai.jam, selesai.menit, selesai.detik);
+        System.out.printf("selisih waktu= %d:%d:%d \n", selisih.jam, selisih.menit, selisih.detik);
+
+    }
+
 }
