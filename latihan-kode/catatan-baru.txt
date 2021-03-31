@@ -4,3 +4,17 @@
 	"javac [nama program].java "
 
     *tanpa tanda petik
+
+	
+ //memasukkan nilai '2' ke dalam 'angka'
+        // %d merupakan decimal
+
+
+// %f menampilkan angka di belakang koma
+        //yang lebih panjang
+
+
+// mencetak 2 digit di belakang koma
+        // gunakan %.2f
+        // jika ingin lebih dari 2, angka '2'
+        //di dalam %.2f diganti 3,4,5 , dst...
