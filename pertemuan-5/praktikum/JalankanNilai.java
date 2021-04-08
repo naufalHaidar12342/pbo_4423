@@ -14,15 +14,12 @@ public class JalankanNilai {
         // 'inputanUser'
         Scanner pilihanUser = new Scanner(System.in);
 
-        // inisiasi variabel cekPilihan
-
         String cekNama;
-        // String cekNamaLagi;
 
         //
-        Integer ulangNama;
+        Integer ulangNama, ulangNilai;
         Double cekNilai;
-        // Double cekNilaiLagi;
+
         // meminta input nama
         cekNama = aksesNilai.mintaNama();
         if (cekNama.isEmpty()) {
@@ -43,17 +40,26 @@ public class JalankanNilai {
             aksesNilai.simpanNilai();
         }
 
-        //
+        // menanyakan apakah ingin isi data lagi
 
         // menanyakan apakah ingin isi nama lagi
-        System.out.print("ingin memasukkan berapa nama lagi? (1,2,3,dst) ");
+        System.out.print("ingin memasukkan berapa nama lagi? (1,2,3,dst...) = ");
         ulangNama = pilihanUser.nextInt();
         for (int i = 0; i < ulangNama; i++) {
             aksesNilai.mintaNama();
+            aksesNilai.simpanNama();
         }
 
         // menanyakan apakah ingin isi nilai lagi
-        System.out.print("apakah ingin memasukkan nilai lagi? (y/n) ");
-
+        System.out.print("ingin memasukkan nilai lagi? (1,2,3,dst...) = ");
+        ulangNilai = pilihanUser.nextInt();
+        for (int j = 0; j < ulangNilai; j++) {
+            aksesNilai.mintaNilai();
+            aksesNilai.simpanNilai();
+        }
+        System.out.println();
+        aksesNilai.daftarNilai();
+        pilihanUser.close();
     }
+
 }

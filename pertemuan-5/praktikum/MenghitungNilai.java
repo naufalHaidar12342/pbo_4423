@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Iterator;
+// import java.util.Iterator;
 import java.util.Scanner;
 
 class MenghitungNilai {
@@ -21,7 +21,7 @@ class MenghitungNilai {
     public String mintaNama() {
         System.out.print("masukkan nama = ");
         nama = inputanUser.nextLine();
-        System.out.println();
+        inputanUser.nextLine();
         return nama;
     }
 
@@ -35,8 +35,7 @@ class MenghitungNilai {
     public double mintaNilai() {
         System.out.print("masukkan nilai = ");
         nilai = inputanUser.nextDouble();
-
-        System.out.println();
+        inputanUser.nextLine();
         return nilai;
     }
 
@@ -50,19 +49,20 @@ class MenghitungNilai {
     // yang sudah disimpan tadi
     void daftarNilai() {
         //
-        Iterator<String> iteratorWadahNama = wadahNama.iterator();
+        // Iterator<String> iteratorWadahNama = wadahNama.iterator();
 
-        //
-        Iterator<Double> iteratorWadahNilai = wadahNilai.iterator();
+        // //
+        // Iterator<Double> iteratorWadahNilai = wadahNilai.iterator();
 
         //
         System.out.println("daftar nama = ");
-        System.out.println(iteratorWadahNama.hasNext());
+        System.out.println(wadahNama);
+        // System.out.println(iteratorWadahNama.hasNext());
         System.out.println();
-
         //
         System.out.println("daftar nilai= ");
-        System.out.println(iteratorWadahNilai.hasNext());
+        System.out.println(wadahNilai);
+        // System.out.println(iteratorWadahNilai.hasNext());
     }
 
 }
