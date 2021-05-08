@@ -1,6 +1,15 @@
-# pbo_4423
-repo/folder untuk tugas pbo.
+## pbo_4423
 
-folder/repo ini digunakan untuk wadah tugas pemrograman berbasis objek,utamanya praktikum.
+Hi! Repo ini saya buat untuk menampung tugas dari mata kuliah pemrograman berbasis objek.
 
-akan sering menggunakan java
+Bahasa pemrograman yang digunakan kali ini adalah Java, tepatnya Java yang disediakan oleh Oracle.
+
+Biasanya saya menggunakan *IDE* seperti:
+
+- *Apache Netbeans*
+- *JetBrains IntelliJ Community Edition*  
+
+, namun sekarang lebih sering menggunakan *JetBrains IntelliJ Community Edition* .
+
+Terima kasih telah mampir!
+
