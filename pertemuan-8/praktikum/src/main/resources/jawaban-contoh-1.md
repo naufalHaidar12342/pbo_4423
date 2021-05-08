@@ -75,4 +75,4 @@ Process finished with exit code 0
 
 Screenshot:
 
-![bukti screenshot program!](pertemuan-8/praktikum/src/main/resources/contoh-soal-1.png)
+![bukti screenshot program!](D:\pemrograman-berbasis-objek\berlatih\pbo_4423\pertemuan-8\praktikum\src\main\resources\contoh-soal-1.png)
