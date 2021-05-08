@@ -20,7 +20,8 @@ public class Person {
         this.address = address;
     }
 
-    //
+    //method ini meminta nama dari pengguna
+    //kemudian di return ke dalam variabel 'name'
     public String getNama() {
         System.out.print("masukkan nama kamu :");
         name=namaDanAlamat.nextLine();
@@ -28,7 +29,8 @@ public class Person {
         //System.out.println();
         return name;
     }
-    //
+    //method ini meminta alamat dari pengguna
+    //kemudian di return ke dalam variabel 'address'
     public String getAddress() {
         System.out.print("masukkan alamat kamu :");
         address=namaDanAlamat.nextLine();
@@ -43,16 +45,22 @@ public class Person {
 
     }
 
-    //
+    //menyimpan argumen yang diberikan user
+    // ke dalam variabel 'address'
     public void setAddress(String address){
         this.address=address;
     }
 
-    //
+    //method ini hanya menampilkan 'pekerjaan: mahasiswa'
+    //langsung dipanggil saja lewat variabel yang
+    //mewakili class 'Student'
     public void jobs(String jobs){
         System.out.println("Pekerjaan :"+jobs);
     }
 
+    //method ini hanya menampilkan 'hobi : melukis'
+    //langsung dipanggil saja lewat variabel yang
+    //mewakili class 'Student'
     public void hobby(){
         System.out.println("Hobi : Melukis");
     }

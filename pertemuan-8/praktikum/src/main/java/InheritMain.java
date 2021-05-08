@@ -9,7 +9,6 @@ public class InheritMain {
         mahasiswa.getAddress();
         mahasiswa.getNim();
 
-        System.out.println();
         //menu tagihan
         mahasiswa.getSKS();
         mahasiswa.getSpp();
@@ -30,6 +29,8 @@ public class InheritMain {
         //menampilkan total tagihan
         System.out.println("Total tagihan : " +mahasiswa.hitungTagihan());
         System.out.println("====================");
+        //akhir dari menu tagihan
+
         //memanggil identity milik student
         //mahasiswa.identity();
 
