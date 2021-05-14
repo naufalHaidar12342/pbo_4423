@@ -2,12 +2,6 @@ public class Segitiga extends BangunDatar{
     double sisi2;
     double sisi3;
 
-    //meminta panjang sisi pertama
-    public double getSisi(){
-        System.out.print("Masukkan sisi 1 = ");
-        sisi=komponenBangunDatar.nextFloat();
-        return sisi;
-    }
 
     //meminta panjang sisi kedua
     public double getSisi2(){
