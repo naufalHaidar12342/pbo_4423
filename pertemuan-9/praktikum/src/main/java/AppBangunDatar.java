@@ -11,12 +11,13 @@ public class AppBangunDatar {
 
         //memanggil method turunan BangunDatar
         //dan memanggil method milik class Segitiga
-        aksesSegitiga.getSisi();
+        menuBangunDatar.getSisi();
         aksesSegitiga.getSisi2();
         aksesSegitiga.getSisi3();
         menuBangunDatar.getTinggi();
         System.out.println("Luas segitiga = "+menuBangunDatar.Luas() + " cm^2");
         System.out.println("Keliling segitiga = "+aksesSegitiga.KelilingSegitiga() + " cm");
+        System.out.println();
 
         System.out.println(">Lingkaran");
         //mengakses class Lingkaran
@@ -29,6 +30,16 @@ public class AppBangunDatar {
         aksesLingkaran.diameterLingkaran();
         System.out.println("Luas lingkaran = "+menuBangunDatar.Luas() +" cm^2");
         System.out.println("Keliling lingkaran = "+aksesLingkaran.Keliling() +" cm");
+        System.out.println();
+
+        System.out.println(">Persegi");
+        Persegi aksesPersegi = new Persegi();
+        menuBangunDatar =aksesPersegi;
+
+        //meminta panjang sisi
+        menuBangunDatar.getSisi();
+        System.out.println("Luas persegi = " +menuBangunDatar.Luas() + " cm^2");
+        System.out.println("Keliling persegi = "+aksesPersegi.kelilingPersegi() + " cm");
 
         System.out.println("=====Selesai=====");
     }
