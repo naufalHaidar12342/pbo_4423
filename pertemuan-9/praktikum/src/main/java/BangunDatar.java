@@ -10,6 +10,14 @@ public class BangunDatar {
     //
     Scanner komponenBangunDatar = new Scanner(System.in);
 
+    //meminta panjang sisi pertama
+    public double getSisi(){
+        System.out.print("Masukkan sisi  = ");
+        sisi=komponenBangunDatar.nextFloat();
+        return sisi;
+    }
+
+
     //
     public double getPanjang(){
         System.out.print("Masukkan panjang : ");
@@ -17,6 +25,7 @@ public class BangunDatar {
         return panjang;
     }
 
+    //
     public double getLebar() {
         System.out.print("Masukkan lebar : ");
         lebar=komponenBangunDatar.nextFloat();
