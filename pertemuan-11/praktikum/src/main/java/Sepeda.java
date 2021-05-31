@@ -11,7 +11,7 @@ public class Sepeda extends Kendaraan{
 
     //
     void jenis(){
-        if (isAuto==true){
+        if (isAuto){
             System.out.println("Sepeda otomatis");
         }else {
             System.out.println("Sepeda kayuh");
