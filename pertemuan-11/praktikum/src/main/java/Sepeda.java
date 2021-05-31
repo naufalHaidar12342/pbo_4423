@@ -1,5 +1,5 @@
 public class Sepeda extends Kendaraan{
-    private boolean tipeSepeda;
+    private boolean isAuto;
 
     //override
     @Override
@@ -10,12 +10,8 @@ public class Sepeda extends Kendaraan{
     }
 
     //
-    public boolean isAuto(){
-        return tipeSepeda;
-    }
-    //
     void jenis(){
-        if (isAuto()){
+        if (isAuto==true){
             System.out.println("Sepeda otomatis");
         }else {
             System.out.println("Sepeda kayuh");
