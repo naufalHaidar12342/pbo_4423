@@ -35,7 +35,21 @@ public class formSederhana {
     * langkah-langkahnya:
     * 1) klik Alt + Insert
     * 2) pilih form main()*/
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        //look and feel
+        //langkah 1: download look and feel dalam bentuk jar
+        //langkah 2: paste .jar tersebut ke folder src
+        //langkah 3: klik kanan pada folder projectnya, kemudian pilih "Open Module Setting"
+        //langkah 4: pada bagian libraries, tambahkan file .jar tadi
+        //langkah 5: kemudian apply, lalu ok
+        //catatan: string di dalam setLookAndFeel mengambil dari ketentuan di
+        //website tempat downloadnya
+        try {
+            UIManager.setLookAndFeel("com.formdev.flatlaf.FlatDarkLaf");
+        }catch (Exception e){
+
+        }
+        //menjalankan window
         JFrame frame = new JFrame("formSederhana");
         frame.setContentPane(new formSederhana().mainWindow);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
