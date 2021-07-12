@@ -29,7 +29,7 @@ public class PersewaanBuku {
     private JButton btnDelete;
 
     static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://localhost:3306/perpus_sekolah";
+    static final String DB_URL = "jdbc:mysql://localhost/perpus_sekolah";
     static final String USER="root";
     static final String PASS="";
 
@@ -38,14 +38,24 @@ public class PersewaanBuku {
     static ResultSet setHasil;
 
     LocalDate tanggalTerkini=LocalDate.now();
-    LocalDate hariTerkini=LocalDate.parse(tanggalTerkini.toString());
+    LocalDate hariTerkini=LocalDate.parse(String.valueOf(tanggalTerkini));
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("PersewaanBuku");
+        frame.setContentPane(new PersewaanBuku().PanelUtama);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+        frame.setSize(1024,720);
+    }
 
     public PersewaanBuku() {
         //set tanggal (ubah property milik JTextField bernama 'fieldTanggal')
         fieldTanggal.addPropertyChangeListener(new PropertyChangeListener() {
             @Override
             public void propertyChange(PropertyChangeEvent evt) {
-                fieldTanggal.setText(tanggalTerkini.toString());
+                String tampungTanggal= String.valueOf(tanggalTerkini);
+                fieldTanggal.setText(tampungTanggal);
             }
         });
         //menampilkan tabel dari database di dalam JTable (ubah property milik JTable bernama 'tableBuku')
@@ -61,28 +71,15 @@ public class PersewaanBuku {
             @Override
             public void propertyChange(PropertyChangeEvent evt) {
                 //memanggil method getDayofWeek, kemudian di ubah ke dalam string
-                fieldHari.setText(hariTerkini.getDayOfWeek().toString());
+                String tampungHari=String.valueOf(hariTerkini.getDayOfWeek());
+                fieldHari.setText(tampungHari);
             }
         });
-        //event ketika button 'Simpan' di klik
-        btnSimpan.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-    }
-
-    //main method dari form. hasil generate oleh intelliJ
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("PersewaanBuku");
-        frame.setContentPane(new PersewaanBuku().PanelUtama);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-        frame.setSize(1024,720);
 
     }
+
+
+
 
     //insert ketika tombol 'Simpan' di-klik
     public void insert(String judulBuku, LocalDate tanggalPinjam, LocalDate wajibKembali ){
@@ -98,9 +95,9 @@ public class PersewaanBuku {
 
             //Prepared statement untuk menghindari sql injection
             PreparedStatement prstmt= sambungkan.prepareStatement(sql);
-            prstmt.setString(2,judulBuku);
-            prstmt.setString(3,tanggalPinjam.toString());
-            prstmt.setString(4,wajibKembali.toString());
+            prstmt.setString(1, judulBuku);
+            prstmt.setString(2, String.valueOf(tanggalPinjam));
+            prstmt.setString(3, String.valueOf(wajibKembali));
 
             prstmt.execute();
 
@@ -140,7 +137,7 @@ public class PersewaanBuku {
 
             //eksekusi perintah sql
             setHasil= statmt.executeQuery(sql);
-            int nomerUrut=1;
+
             while (setHasil.next()){
                 kerangkaTabel.addRow(new Object[] {
                         setHasil.getString("id"),
@@ -151,7 +148,7 @@ public class PersewaanBuku {
                         setHasil.getString("denda"),
                         setHasil.getString("biaya_sewa")
                 });
-                nomerUrut++;
+
             }
             setHasil.close();
             sambungkan.close();
